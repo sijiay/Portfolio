@@ -1,0 +1,461 @@
+@import 'variables';
+@import 'animation';
+
+html{
+	font-size: 14px;
+}
+
+body{
+	background-color: white;
+	overflow-x: hidden;
+	font-family: 'Avenir Next', 'Lato', Helvetica, sans-serif;
+	color: seashell;
+}
+
+div .project-card:hover, #project_1:hover{
+	transition: none;
+	opacity: 1;
+	box-shadow: none;
+	box-shadow: inset 0 0 0 1000px rgba(250, 250, 250,.2);
+}
+div #left-container{
+	background-color: $primary-color;
+}
+div #project_1{
+	background-color: $creme;
+}
+div #project_2{
+	background-color: $mint;
+}
+div#project_3{
+	background-color: $blue;
+}
+
+div #project_4{
+	background-color: $slate;
+}
+.project-card h3{
+	color: $slate;
+}
+.project-card h6{
+	color: $slate;
+}
+#project_4 h3, #project_4 h6{
+	color: #9AF2DB;
+}
+
+#left-container a{
+	color: seashell;
+	opacity: 1;
+}
+#left-container a:hover{
+	color: seashell;
+	opacity: .5;
+}
+#left-container a.button, a.salmon-button{
+	transition: all 0.3s ease;
+
+}
+
+#left-container a.button:hover{
+	text-decoration: none;
+	color: $primary-color;
+	opacity: 1;
+	background-color: seashell;
+}
+a.decoration{
+	color: seashell;
+	font-weight: 400;
+	border-bottom: 1px dotted seashell;
+}
+a.decoration:hover{
+	text-decoration: none;
+}
+
+
+/** Mobile devices under 320 px*/
+
+/* modal stuff */
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+/** Mobile devices under 768px**/
+@media (min-width: 320px) {
+
+	body{
+		font-size: 100%;
+	}
+	#banner{
+		position:relative;
+		width: 100%;
+	}
+	#left-container{
+		position: static;
+			width: 100%;
+			height: 100vh;
+			overflow: auto;
+
+	}
+	#right-container{
+		position: static;
+		width: 100%;
+		height: 100%;
+	}
+	div .project-card {
+		height: 200px;
+		padding-top: 60px;
+	}
+	p{
+		font-size: 1em;
+		padding: 5px;
+	}
+	div.home-content{
+		height: 100%;
+		width: 100%;
+		padding-top: 70px;
+	}
+	.header-nav{
+		width: 100%;
+		background-color: $primary-color;
+		left: 0;
+		clear: both;
+	}
+
+	.modalDialog{
+		width: 100%;
+		height: 100%;
+	}
+	.close{
+
+		right: 10px;
+	}
+	iframe{
+		width: 100%; 
+		height: auto; 
+	}
+}
+@media (min-width: 320px) and (max-width:768px){
+
+	.cover-wrapper{
+		height: 100vh;
+		padding-top: 70px;
+	}
+}
+/** screens 768 pixels and higher **/
+@media (min-width: 768px){ 
+	body{
+		font-size: 110%;
+	}
+
+	.cover-wrapper{
+		
+	}
+	#left-container{
+		position: fixed;
+			width: 50%;
+			top: 0;
+			left: 0;
+		height: 100%;
+	}
+	#right-container{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+	}
+	#banner{
+		position:relative;
+		width: 100%;
+	}
+	div.home-content{		
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	div.project-card {
+		height: 300px;
+		padding-top: 100px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	p{	
+		font-size: 1em;
+		padding: 5px 10px;
+	}
+	.modalDialog{
+		width: 50%;
+		height: 100%;
+	}
+	.close{
+
+	}
+
+	iframe{
+		width: 560px; 
+		height: 315px; 
+	}
+}
+
+/* Fonts */
+@font-face {
+   font-family: MarkOT-Thin;
+   src: url(../fonts/MarkOT/MarkOT-Thin.otf);
+}
+@font-face {
+   font-family: MarkOT-Bold;
+   src: url(../fonts/MarkOT/MarkOT-Bold.otf);
+}
+@font-face {
+   font-family: MarkOT-Light;
+   src: url(../fonts/MarkOT/MarkOT-Light.otf);
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 5em;
+}
+
+h2{
+	font-size: 3em;
+}
+h3 {
+	font-weight: 700;
+	font-size: 2.25em;
+}
+h4{
+	font-weight: 400;
+	line-height: 1.5em;
+}
+h6{
+	font-size: 1.125em;
+}
+p{
+	font-weight:300;
+	letter-spacing: 0.1px;
+}
+hr{
+	width: 30%;
+	padding: 0 0 1em 0;
+}
+
+div.social-buttons{
+	margin: 2em 0 2em 0;
+}
+a.salmon{
+	color: $primary-color;
+	border-bottom: 1px dotted $primary-color;
+
+}
+a.salmon-button{
+	color:$primary-color;
+   	border: 2px solid $primary-color;
+   	padding: 10px 20px;
+   	margin: 20px 20px;
+}
+a.salmon-button:hover{
+	color: seashell;
+	background-color: $primary-color;
+	text-decoration: none;
+}
+/*
+ul.social-buttons li a {
+	display: block;
+	width: 40px;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 100%;
+	background-color: dimgray;
+	color: white;
+}*//*
+div.link-button{
+	border-style: solid;
+	border-width: 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	overflow: none;
+	clear: bottom;
+}*//*
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.flex-item{
+
+}*/
+.button-wrapper{
+	margin: 10px 0;
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+h3.section-number{
+	margin-top: 60px;
+}
+.social-buttons li a {
+	color: seashell;
+	padding: 12px;
+}
+.social-buttons{
+	bottom: 10px;
+	clear: both;
+}
+img.preview-img{
+	width: 50%;
+}
+nav.navbar-top{
+	padding: 10px;
+}
+#home-button{
+	margin-left: 20px;
+}
+a#home-button:hover{
+	text-decoration: none;
+}
+/* Project Page */
+h1.project-title{
+	font-family: 'Proxima Nova', Helvetica, sans-serif;
+	font-size: 2em;
+	color: seashell;
+}/*
+.header-icon{
+	display: inline-block;
+	background-color: yellow;
+	height: 60px;
+	margin: 15px;
+}
+*/
+.header-links{
+	padding: 15px 15px 15px 0;
+}
+.header-nav{
+	z-index: 1;
+	max-height: 70px;
+	position: fixed;
+}
+.project-card{
+	position: relative;
+	margin: 0 auto;
+	color: seashell;
+	background-color: white;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+strong{
+	letter-spacing: 0.1px;
+}
+
+.modalDialog > div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 100%;
+	padding: 5px 20px 13px 20px;
+	border-left: 2px solid seashell;
+	background: $primary-color;
+	overflow-y:scroll;/*
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);*/
+}
+#about
+.project-wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.cover-wrapper{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.button {
+	color: seashell;
+   	border: 2px solid seashell;
+
+   	padding: 10px 20px;
+   	margin: 20px 20px;
+}
+.about-buttons{
+	padding-top: 20px;
+}
+.close {
+	background: $primary-color;
+	color: #FFFFFF;
+	line-height: 40px;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	top: 10px;
+	width: 40px;
+	text-decoration: none;
+	text-shadow: none;
+	font-weight: bold;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+	opacity: .6;
+}
+
+.close:hover { 
+	background: seashell; 
+
+}
+p.caption{
+	font-size: .8em;
+	font-weight: 400;
+}
+
+hr.section-divider{
+	width: 4em;
+	padding: 0 0 0 0;
+}
+.project-section p{
+	font-weight: 400;
+}
+
+h3.section-number{
+	font-size: 1em;
+	text-align: center;
+}
+h2.section-heading{
+	font-size: 2em;
+}
+
+.section-number, .section-heading, .project-section{
+	color: #424949;
+}
+hr.section-divider{
+	width: 4em;
+}
