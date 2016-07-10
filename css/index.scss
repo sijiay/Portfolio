@@ -4,7 +4,10 @@
 html{
 	font-size: 14px;
 }
-
+#left-container, #right-container, home-content{
+	padding-left: 0;
+	padding-right: 0;
+}
 body{
 	background-color: white;
 	overflow-x: hidden;
@@ -12,17 +15,35 @@ body{
 	color: seashell;
 }
 
+div .project-card{
+	height: 40vh;
+	padding: 0;
+	position: relative;
+	margin: 0 auto;
+	color: seashell;
+	background-color: white;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+	  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+	  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+	  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+	  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+	z-index: 1;
+
+}
 div .project-card:hover, #project_1:hover{
 	transition: none;
 	opacity: 1;
 	box-shadow: none;
 	box-shadow: inset 0 0 0 1000px rgba(250, 250, 250,.2);
+
 }
 div #left-container{
 	background-color: $primary-color;
 }
 div #project_1{
 	background-color: $creme;
+	 
 }
 div #project_2{
 	background-color: $mint;
@@ -112,8 +133,8 @@ a.decoration:hover{
 		height: 100%;
 	}
 	div .project-card {
-		height: 200px;
-		padding-top: 60px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	p{
 		font-size: 1em;
@@ -184,8 +205,6 @@ a.decoration:hover{
 		height: 100%;
 	}
 	div.project-card {
-		height: 300px;
-		padding-top: 100px;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -208,19 +227,6 @@ a.decoration:hover{
 	}
 }
 
-/* Fonts */
-@font-face {
-   font-family: MarkOT-Thin;
-   src: url(../fonts/MarkOT/MarkOT-Thin.otf);
-}
-@font-face {
-   font-family: MarkOT-Bold;
-   src: url(../fonts/MarkOT/MarkOT-Bold.otf);
-}
-@font-face {
-   font-family: MarkOT-Light;
-   src: url(../fonts/MarkOT/MarkOT-Light.otf);
-}
 
 h1 {
 	font-weight: 700;
@@ -358,12 +364,6 @@ h1.project-title{
 	max-height: 70px;
 	position: fixed;
 }
-.project-card{
-	position: relative;
-	margin: 0 auto;
-	color: seashell;
-	background-color: white;
-}
 .modalDialog:target {
 	opacity:1;
 	pointer-events: auto;
@@ -459,3 +459,15 @@ h2.section-heading{
 hr.section-divider{
 	width: 4em;
 }
+
+/** code for image background on divs **/
+.responsive-img{
+	width: 100%;
+	background-size: 100% 100%
+}
+img.responsive-img{
+	z-index: -1
+}
+
+/* Desktop */
+
